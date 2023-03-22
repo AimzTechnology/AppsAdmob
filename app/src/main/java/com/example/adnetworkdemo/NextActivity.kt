@@ -2,7 +2,7 @@ package com.example.adnetworkdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.custom.admob.libs.Ads
+import com.aimz.admob.libs.Ads
 
 class NextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

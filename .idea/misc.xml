@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/close_icon.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/customratingstars.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/gnt_outline_shape.xml" value="0.1" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/gnt_rounded_corners_shape.xml" value="0.1" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/ic_baseline_star_24_empty.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/ic_baseline_star_24_filled.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/drawable/ic_outline_info_24.xml" value="0.1205" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ad_unified.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ad_unified_black.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ad_unified_black_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ad_unified_white.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ad_unified_white_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/admob_native_frame_black.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/admob_native_frame_small_black.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/admob_native_frame_small_white.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/admob_native_frame_white.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ads_area_black_layout.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ads_area_layout_black_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ads_area_layout_white_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/ads_area_white_layout.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/applovin_native_custom_black_layout.xml" value="0.2" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/applovin_native_custom_black_small.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/applovin_native_custom_layout.xml" value="0.16" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/applovin_native_custom_white_layout.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/applovin_native_custom_white_small.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/banner_ad_layout.xml" value="0.15576192486281132" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/custom_interstitial_layout.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/custom_video_player.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/gnt_outline_shape.xml" value="0.1" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/in_house_layout_black.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/in_house_layout_black_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/in_house_layout_white.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/in_house_layout_white_small.xml" value="0.1921875" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/native_custom_layout.xml" value="1.1571428571428573" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/allnetworkads/src/main/res/layout/small_native.xml" value="0.15775972637879435" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/app/src/main/res/layout/activity_main.xml" value="0.17" />
-        <entry key="..\:/aMaria/AndroidStudioProjects/AllAdsNetworkLibrary/app/src/main/res/layout/activity_next.xml" value="0.15775972637879435" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

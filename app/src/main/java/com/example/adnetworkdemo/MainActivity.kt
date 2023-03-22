@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.custom.admob.libs.Ads
-import com.custom.admob.libs.admob.ENUMS
+import com.aimz.admob.libs.Ads
+import com.aimz.admob.libs.admob.ENUMS
 
-import com.custom.admob.libs.adslib.TestAds
+import com.aimz.admob.libs.adslib.TestAds
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
