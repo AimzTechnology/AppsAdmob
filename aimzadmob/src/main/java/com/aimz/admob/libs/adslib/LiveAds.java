@@ -25,9 +25,9 @@ public class LiveAds {
             storeAds(context);
         }
 
-        if (InternetConnection.checkConnection(context)) {
+//        if (InternetConnection.checkConnection(context)) {
             fetchData(context, packageName);
-        }
+//        }
 
 //        InHouseAds.getInHouseAds(context, packageName);
     }

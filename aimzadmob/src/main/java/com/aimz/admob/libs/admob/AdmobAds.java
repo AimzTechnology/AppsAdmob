@@ -4,10 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -15,17 +13,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
 import com.aimz.admob.libs.AdsCounter;
 import com.aimz.admob.libs.R;
-import com.aimz.admob.libs.adslib.AdsClick;
 import com.aimz.admob.libs.adslib.Constants;
 import com.aimz.admob.libs.adslib.SharedPrefUtils;
 import com.google.android.gms.ads.AdError;
@@ -45,7 +39,6 @@ import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdOptions;
 import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.textview.MaterialTextView;
 
 public class AdmobAds {
 
