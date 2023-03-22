@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ads_lib_app_name">AllNetworkAds</string>
+    <string name="ads_lib_base_url">https://adstesting.toptrendingappstudio.com/</string>
+    <string name="ads_lib_sdk_key">dXamJFsl1rOiBkcFLc-k86viGVtluHQQUF3IUJqdidsyQ38SN25oxwOyx1G1Rqcg592lS1doVKhgtfKovvLMbI</string>
+
+    <string name="close">Close</string>
+    <string name="install">Install</string>
+
+</resources>

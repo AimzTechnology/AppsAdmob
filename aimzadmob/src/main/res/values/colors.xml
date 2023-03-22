@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ads_lib_white">#ffffff</color>
+    <color name="ads_lib_blue">#0000FF</color>
+    <color name="ads_lib_black">#000000</color>
+
+</resources>
