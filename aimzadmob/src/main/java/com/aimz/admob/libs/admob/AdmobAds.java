@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +17,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
@@ -401,7 +405,8 @@ public class AdmobAds {
      */
     @SuppressLint("MissingPermission")
     public static void refreshAd(Context context, Activity activity, String appName,
-                                 String pkgName, int isSmallAd, int nativeThemeColor) {
+                                 String pkgName, int isSmallAd, int nativeThemeColor, String btnBackgroundColor) {
+
         FrameLayout nativeAds = activity.findViewById(R.id.fl_adplaceholder);
        LinearLayout AdsAreaEmpty = activity.findViewById(R.id.ads_area_empty);
         /*  LinearLayoutCompat inHouseAdArea =  activity.findViewById(R.id.inHouseAd);*/
@@ -438,7 +443,7 @@ public class AdmobAds {
 
                             NativeAdView adView =
                                     (NativeAdView) activity.getLayoutInflater().inflate(layout, null);
-                            populateNativeAdView(nativeAd, adView,isSmallAd);
+                            populateNativeAdView(nativeAd, adView,isSmallAd, btnBackgroundColor);
                             nativeAds.removeAllViews();
                             nativeAds.addView(adView);
 
@@ -494,7 +499,7 @@ public class AdmobAds {
 
     @SuppressLint("MissingPermission")
     public static void refreshFragmentAd(Context context, Activity activity, View view, String appName,
-                                         String pkgName, int isSmallAd, int nativeThemeColor) {
+                                         String pkgName, int isSmallAd, int nativeThemeColor, String backgroundBtnColor) {
         FrameLayout nativeAds =view.findViewById(R.id.fl_adplaceholder);
         LinearLayout AdsAreaEmpty = view.findViewById(R.id.ads_area_empty);
       /*
@@ -536,7 +541,7 @@ public class AdmobAds {
                             int layout = getNativeLayout(isSmallAd, nativeThemeColor);
                             NativeAdView adView =
                                     (NativeAdView) activity.getLayoutInflater().inflate(layout, null);
-                            populateNativeAdView(nativeAd, adView,isSmallAd);
+                            populateNativeAdView(nativeAd, adView,isSmallAd,backgroundBtnColor);
 
                             nativeAds.removeAllViews();
                             nativeAds.addView(adView);
@@ -610,7 +615,8 @@ public class AdmobAds {
         return layout;
     }
 
-    private static void populateNativeAdView(NativeAd nativeAd, NativeAdView adView, int isSmallAd) {
+    @SuppressLint("RestrictedApi")
+    private static void populateNativeAdView(NativeAd nativeAd, NativeAdView adView, int isSmallAd, String bgBtncolor ) {
         // Set the media view.
         try {
 
@@ -620,7 +626,14 @@ public class AdmobAds {
             // Set other ad assets.
             adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
             adView.setBodyView(adView.findViewById(R.id.ad_body));
-            adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+
+            AppCompatButton btn = adView.findViewById(R.id.ad_call_to_action);
+//            btn.setBackgroundColor(Color.parseColor("#2f5445"));
+            btn.setSupportBackgroundTintList(ColorStateList.valueOf(Color.parseColor(bgBtncolor)));
+//            btn.setSupportButtonTintList(ContextCompat.getColorStateList(activity, Color.parseColor("#2f5445") ));
+            adView.setCallToActionView(btn);
+
+
             adView.setIconView(adView.findViewById(R.id.ad_app_icon));
             adView.setPriceView(adView.findViewById(R.id.ad_price));
             adView.setStarRatingView(adView.findViewById(R.id.ad_stars));

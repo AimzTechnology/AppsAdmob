@@ -37,14 +37,14 @@ public class Ads {
 
     public static void loadNative(Context context, Activity activity, View view, String appName,
                                   String pkgName, int isSmallAd, int nativeTheme,
-                                  boolean isFragment) {
+                                  boolean isFragment, String BtnBgColor) {
         boolean showAdmob = SharedPrefUtils.getBooleanData(context, Constants.SHOW_ADMOB);
         if(showAdmob) {
             if(isFragment) {
-                AdmobAds.refreshFragmentAd(context, activity, view, appName, pkgName, isSmallAd, nativeTheme);
+                AdmobAds.refreshFragmentAd(context, activity, view, appName, pkgName, isSmallAd, nativeTheme, BtnBgColor);
             }
             else {
-                AdmobAds.refreshAd(context, activity, appName, pkgName, isSmallAd, nativeTheme);
+                AdmobAds.refreshAd(context, activity, appName, pkgName, isSmallAd, nativeTheme, BtnBgColor);
             }
         }
         else {
