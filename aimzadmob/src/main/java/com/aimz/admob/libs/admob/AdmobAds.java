@@ -403,8 +403,8 @@ public class AdmobAds {
     public static void refreshAd(Context context, Activity activity, String appName,
                                  String pkgName, int isSmallAd, int nativeThemeColor) {
         FrameLayout nativeAds = activity.findViewById(R.id.fl_adplaceholder);
-        /*LinearLayout AdsAreaEmpty = activity.findViewById(R.id.ads_area_empty);
-        LinearLayoutCompat inHouseAdArea =  activity.findViewById(R.id.inHouseAd);*/
+       LinearLayout AdsAreaEmpty = activity.findViewById(R.id.ads_area_empty);
+        /*  LinearLayoutCompat inHouseAdArea =  activity.findViewById(R.id.inHouseAd);*/
 
         String nativeAdId = SharedPrefUtils
                 .getStringData(context, Constants.NATIVE_AD);
@@ -444,8 +444,9 @@ public class AdmobAds {
 
                             //correct
                             nativeAds.setVisibility(View.VISIBLE);
+                            AdsAreaEmpty.setVisibility(View.GONE);
                           /*  inHouseAdArea.setVisibility(View.GONE);
-                            AdsAreaEmpty.setVisibility(View.GONE);*/
+                           */
 
                             //Testing
                             /*InHouseNativeAds.showInHouseAds(context, activity, appName, pkgName, isSmallAd);
@@ -479,8 +480,9 @@ public class AdmobAds {
                                             inHouseAdArea.setVisibility(View.VISIBLE);
                                         } else {*/
                                             nativeAds.setVisibility(View.GONE);
+                                        AdsAreaEmpty.setVisibility(View.VISIBLE);
                                            /* inHouseAdArea.setVisibility(View.GONE);
-                                            AdsAreaEmpty.setVisibility(View.VISIBLE);*/
+                                            */
 //                                        }
                                     }
                                 })
@@ -494,7 +496,8 @@ public class AdmobAds {
     public static void refreshFragmentAd(Context context, Activity activity, View view, String appName,
                                          String pkgName, int isSmallAd, int nativeThemeColor) {
         FrameLayout nativeAds =view.findViewById(R.id.fl_adplaceholder);
-      /*  LinearLayout AdsAreaEmpty = view.findViewById(R.id.ads_area_empty);
+        LinearLayout AdsAreaEmpty = view.findViewById(R.id.ads_area_empty);
+      /*
         LinearLayoutCompat inHouseAdArea =  view.findViewById(R.id.inHouseAd);*/
         String nativeAD = "";
         try {
@@ -540,8 +543,9 @@ public class AdmobAds {
 
                             //correct
                             nativeAds.setVisibility(View.VISIBLE);
+                            AdsAreaEmpty.setVisibility(View.GONE);
                           /*  inHouseAdArea.setVisibility(View.GONE);
-                            AdsAreaEmpty.setVisibility(View.GONE);*/
+                           */
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -571,8 +575,9 @@ public class AdmobAds {
 //                                                inHouseAdArea.setVisibility(View.VISIBLE);
 //                                            } else {
                                                 nativeAds.setVisibility(View.GONE);
+                                            AdsAreaEmpty.setVisibility(View.VISIBLE);
                                               /*  inHouseAdArea.setVisibility(View.GONE);
-                                                AdsAreaEmpty.setVisibility(View.VISIBLE);*/
+                                                */
 //                                            }
                                         } catch (Exception e) {
                                             e.printStackTrace();

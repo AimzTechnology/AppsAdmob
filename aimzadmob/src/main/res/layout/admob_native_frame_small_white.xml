@@ -5,18 +5,29 @@
     android:id="@+id/natve_ad_top"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-<!--
     <include layout="@layout/ads_area_layout_white_small" />
--->
-    <FrameLayout
-        android:id="@+id/fl_adplaceholder"
-        android:layout_width="match_parent"
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="120dp"
-        android:layout_marginTop="8dp"
-        android:visibility="gone"
-        android:layout_marginHorizontal="16dp"/>
-<!--
-    <include layout="@layout/in_house_layout_white_small" />
--->
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/ads_lib_white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:strokeColor="@color/ads_lib_black"
+        app:strokeWidth="1dp">
+        <FrameLayout
+            android:id="@+id/fl_adplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="16dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <include layout="@layout/in_house_layout_white_small" />-->
 </LinearLayout>
