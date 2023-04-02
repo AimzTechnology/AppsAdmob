@@ -399,13 +399,62 @@ public class AdmobAds {
         }
     }
 
+
+    public static void redirectFragmentWithcommitAllowingStateLoss(Context context, Activity activtiy, String appName, String packageName,
+                                                  FragmentTransaction fragmentTransaction){
+        if (AdsCounter.isShowAd(context)) {
+            if (mInterstitial != null) {
+                mInterstitial.show(activtiy);
+                mInterstitial.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                        super.onAdFailedToShowFullScreenContent(adError);
+                    }
+
+                    @Override
+                    public void onAdShowedFullScreenContent() {
+                        super.onAdShowedFullScreenContent();
+                    }
+
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        super.onAdDismissedFullScreenContent();
+
+                        // Commit the transaction
+                        fragmentTransaction.commitAllowingStateLoss();
+                        mInterstitial = null;
+                        loadAdmobInters(context);
+                    }
+
+                    @Override
+                    public void onAdImpression() {
+                        super.onAdImpression();
+                    }
+
+                    @Override
+                    public void onAdClicked() {
+                        super.onAdClicked();
+                    }
+                });
+            } else {
+                // Commit the transaction
+                fragmentTransaction.commitAllowingStateLoss();
+              /*  InHouseInterAds.Companion.commitFragmentInHouseInterAd(context, activtiy, appName,
+                        packageName, fragmentTransaction);*/
+            }
+        } else {
+            // Commit the transaction
+            fragmentTransaction.commitAllowingStateLoss();
+        }
+    }
+
     /**
      * Creates a request for a new native ad based on the boolean parameters and calls the
      * corresponding "populate" method when one is successfully returned.
      */
     @SuppressLint("MissingPermission")
     public static void refreshAd(Context context, Activity activity, String appName,
-                                 String pkgName, int isSmallAd, int nativeThemeColor, String btnBackgroundColor) {
+                                 String pkgName, int isSmallAd, int nativeThemeColor, int btnBackgroundColor) {
 
         FrameLayout nativeAds = activity.findViewById(R.id.fl_adplaceholder);
        LinearLayout AdsAreaEmpty = activity.findViewById(R.id.ads_area_empty);
@@ -499,7 +548,7 @@ public class AdmobAds {
 
     @SuppressLint("MissingPermission")
     public static void refreshFragmentAd(Context context, Activity activity, View view, String appName,
-                                         String pkgName, int isSmallAd, int nativeThemeColor, String backgroundBtnColor) {
+                                         String pkgName, int isSmallAd, int nativeThemeColor, int backgroundBtnColor) {
         FrameLayout nativeAds =view.findViewById(R.id.fl_adplaceholder);
         LinearLayout AdsAreaEmpty = view.findViewById(R.id.ads_area_empty);
       /*
@@ -616,7 +665,7 @@ public class AdmobAds {
     }
 
     @SuppressLint("RestrictedApi")
-    private static void populateNativeAdView(NativeAd nativeAd, NativeAdView adView, int isSmallAd, String bgBtncolor ) {
+    private static void populateNativeAdView(NativeAd nativeAd, NativeAdView adView, int isSmallAd, int idColor ) {
         // Set the media view.
         try {
 
@@ -629,7 +678,14 @@ public class AdmobAds {
 
             AppCompatButton btn = adView.findViewById(R.id.ad_call_to_action);
 //            btn.setBackgroundColor(Color.parseColor("#2f5445"));
-            btn.setSupportBackgroundTintList(ColorStateList.valueOf(Color.parseColor(bgBtncolor)));
+
+//            btn.setSupportBackgroundTintList()
+
+            try {
+                btn.setSupportBackgroundTintList(ColorStateList.valueOf(idColor));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 //            btn.setSupportButtonTintList(ContextCompat.getColorStateList(activity, Color.parseColor("#2f5445") ));
             adView.setCallToActionView(btn);
 

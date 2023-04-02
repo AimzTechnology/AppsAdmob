@@ -37,7 +37,7 @@ public class Ads {
 
     public static void loadNative(Context context, Activity activity, View view, String appName,
                                   String pkgName, int isSmallAd, int nativeTheme,
-                                  boolean isFragment, String BtnBgColor) {
+                                  boolean isFragment, int BtnBgColor) {
         boolean showAdmob = SharedPrefUtils.getBooleanData(context, Constants.SHOW_ADMOB);
         if(showAdmob) {
             if(isFragment) {
@@ -108,6 +108,21 @@ public class Ads {
 
         if(showAdmob) {
             AdmobAds.redirectFragmentWithCommit(context, activity, appName, packageName, fragmentTransaction);
+        }
+        else {
+//            AppLovinAds.Companion.redirectFragmentWithCommit(context, activity, appName, packageName, fragmentTransaction);
+        }
+    }
+
+    public static void showFragmentInterWithcommitAllowingStateLoss(Context context, Activity activity,
+                                                   FragmentTransaction fragmentTransaction) {
+        boolean showAdmob = SharedPrefUtils.getBooleanData(context, Constants.SHOW_ADMOB);
+
+        String packageName = activity.getPackageName();
+        String appName = activity.getApplicationInfo().loadLabel(activity.getPackageManager()).toString();
+
+        if(showAdmob) {
+            AdmobAds.redirectFragmentWithcommitAllowingStateLoss(context, activity, appName, packageName, fragmentTransaction);
         }
         else {
 //            AppLovinAds.Companion.redirectFragmentWithCommit(context, activity, appName, packageName, fragmentTransaction);
